@@ -1,0 +1,20 @@
+{
+  "name": "jaran",
+  "description": "jaran is web-develper work-space",
+  "main": "index.js",
+  "authors": [
+    "ibnHamdan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "jaran"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
