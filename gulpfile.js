@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var browser = rquire('browser-sync');
+var browser = require('browser-sync');
 var requireDir = require('require-dir');
 
-requireDir('./gulp');
+requireDir('./gulp/');
 
 gulp.task('default', ['server', 'watch']);
 
