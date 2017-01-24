@@ -19,6 +19,8 @@
     "gulp-flatten": "^0.3.1",
     "gulp-sass": "^3.1.0",
     "require-dir": "^0.3.1",
-    "rimraf": "^2.5.4"
+    "requirejs": "^2.3.2",
+    "rimraf": "^2.5.4",
+    "systemjs": "^0.19.43"
   }
 }

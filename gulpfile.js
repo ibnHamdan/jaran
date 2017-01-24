@@ -1,29 +1,34 @@
 var gulp = require('gulp');
-var browser = require('browser-sync');
+var browser = require('browser-sync').create();
 var requireDir = require('require-dir');
+var map = require('./gulp/maps.js');
 
-requireDir('./gulp/');
+requireDir('./gulp', { recurse: true });
 
 gulp.task('default', ['server', 'watch']);
 
 // Builds the files
-gulp.task('build', ['clean']);
+gulp.task('build', ['clean', 'prototype']);
+
+gulp.task('source', ['clean', 'source:sass', 'source:javascript','source:assets']);
+
+gulp.task('prototype',['clean','source', 'prototype:html', 'prototype:assets']);
 
 // Starts a browerSync instance
 gulp.task('server', ['build'], function(){
     browser.init({
-        server: './_build',
+        server: {
+            baseDir : './_build',
+        },
          port: process.env.SERVER_PORT || 3000
         });
 });
 
-gulp.task('source', ['clean', 'source:sass', 'source:javascript','source:assets']);
-
-gulp.task('prototype',['clean', 'prototype:html', 'prototype:assets']);
-
 
 // watch files for changes
 gulp.task('watch', function(){
-    gulp.watch('',[]);
+    gulp.watch([map.SCSS], ['source:sass', browser.reload]);
+    gulp.watch([map.JS], ['source:javascript', browser.reload]);
+    gulp.watch(['./prototype/{layouts,partials,helpers,pages,data}/**/*'], ['prototype:html', browser.reload]);
+    gulp.watch(['./prototype/assets/**/*'], ['prototype:assets', browser.reload]);
 });
-
