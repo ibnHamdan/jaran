@@ -1,23 +1,44 @@
+var nameSearch = nameSearch || {};
 
+(function (nameSearch) {
+    nameSearch.init = function(){
+         this.getData();
 
-var users = $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/users',
-    method: 'Get'
-}).then(function (data) {
-    names(data);
-});
+         this.showUsers.getNames();
 
-var usersName = [];
-function names(data) {
-    var list = data;
-    
-    list.forEach(function(el, index, array){
-         usersName.push(el.name);
-        for(var prop in el){
-        }
-    });
-}
+         this.showUsers.updateText();
 
-var resultsArea = document.getElementById('resutArea');
+         return ;
+    };  
+})(nameSearch);
 
-resultsArea.value = usersName;
+(function (nameSearch) {
+    nameSearch.getData = function(){
+         $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/users',
+            method: 'Get'
+        }).then(function (data) {
+            nameSearch.showUsers.getNames(data);
+        });
+    };  
+})(nameSearch);
+(function (nameSearch) {
+    nameSearch.showUsers = {
+        usersName : [],
+        getNames: function (data) {
+            var list = data;
+            for(var prop in list){
+                list.forEach(function (el, index, array) {
+                nameSearch.showUsers.usersName.push(el.name);
+                for (var prop in el) {
+                }
+            });
+            }
+        },
+        updateText : function(){
+            var resultsArea = document.getElementById('resultArea');
+            resultsArea.value = nameSearch.showUsers.usersName;
+            
+        }  
+    };
+})(nameSearch);
