@@ -16,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "calendars": "https://github.com/kbwood/calendars.git#2.0.0"
+  }
 }

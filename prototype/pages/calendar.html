@@ -1,0 +1,29 @@
+<h1>Calendar</h1>
+<input type="text" id="dateInput"></input>
+
+
+
+
+<script src="./assets/js/jquery.js"></script>
+<script src="../bower_components/calendars/jquery.calendars.plus.js"></script>
+
+<script src="../bower_components/calendars/jquery.calendars.ummalqura.js"></script>
+
+<script src="../bower_components/calendars/jquery.calendars.ummalqura-ar.js"></script>
+<script src="../bower_components/calendars/jquery.calendars-ar.js"></script>
+<script src="../bower_components/calendars/jquery.calendars-fr.js"></script>
+<script src="../bower_components/calendars/jquery.plugin.js"></script>
+<script src="../bower_components/calendars/jquery.calendars.picker.js"></script>
+<script src="../bower_components/calendars/jquery.calendars.picker-ar.js"></script>
+<script src="./src/js/calendar.js"></script>
+<script>
+$('#dateInput').on('click', function(){
+    calendarsPicker({
+                calendar: $.calendars.instance('ummalqura', 'ar'),
+                monthsToShow: [1, 1],
+                showOtherMonths: true,
+                dateFormat: 'dd-mm-yyyy',
+                yearRange: '-100:+1',
+            });
+});
+</script>
