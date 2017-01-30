@@ -2,13 +2,25 @@
 
 <labele>Enter Name</labele>
 <input type="text" placeholder="Enter The Name">
-
+<button id="showNamesBtn">Show Names</button>
 <h2>Results</h2>
 <textarea name="" id="resultArea" cols="20" rows="10"></textarea>
 
 
+
 <script src="./assets/js/jquery.js"></script>
-     <script src="./src/js/nameSearch.js"></script>
-     <script>
-     nameSearch.init();
+<script src="./src/js/nameSearch.js"></script>
+<script>
+// document.addEventListener("ready", function() {
+//     nameSearch.init();
+//     console.log('one');
+//     nameSearch.init();
+//     console.log('two');
+// })
+$(document).ready(function() {
+    // $('#showNamesBtn').on('click', function(){
+        nameSearch.init();
+    // });
+    
+});
 </script>
