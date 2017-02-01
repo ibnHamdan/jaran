@@ -1,26 +1,19 @@
-<h1>Name Search</h1>
-
-<labele>Enter Name</labele>
-<input type="text" placeholder="Enter The Name">
-<button id="showNamesBtn">Show Names</button>
-<h2>Results</h2>
-<textarea name="" id="resultArea" cols="20" rows="10"></textarea>
-
-
-
+<link rel="stylesheet" href="./assets/css/foundation.min.css">
+<input type="hidden" id="namesHiddenInput">
+<div class="row">
+        <div class="small-6 columns">
+                <h1>Name Search</h1>
+                <labele>Enter Name</labele>
+                <input type="text" placeholder="Enter The Name">
+                <button id="showNamesBtn" class="button">Show Result</button>
+                <h2>Results</h2>
+                <textarea name="" id="resultArea" cols="20" rows="10"></textarea>
+        </div>
+</div>
 <script src="./assets/js/jquery.js"></script>
 <script src="./src/js/nameSearch.js"></script>
 <script>
-// document.addEventListener("ready", function() {
-//     nameSearch.init();
-//     console.log('one');
-//     nameSearch.init();
-//     console.log('two');
-// })
-$(document).ready(function() {
-    // $('#showNamesBtn').on('click', function(){
-        nameSearch.init();
-    // });
-    
-});
+        $(document).ready(function () {
+                nameSearch.init();
+        });
 </script>
