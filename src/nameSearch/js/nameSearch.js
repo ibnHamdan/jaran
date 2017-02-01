@@ -12,13 +12,14 @@ var nameSearch = nameSearch || {};
          $.ajax({
             url: 'https://jsonplaceholder.typicode.com/users',
             method: 'Get'
-        }).done(this.showUsers.getNames.bind(this.showUsers));
+        }).done(this.getNames.getNames.bind(this.getNames));
     };  
 })(nameSearch);
 
 
 (function (nameSearch) {
-    nameSearch.showUsers = {
+    nameSearch.getNames = {
+        _namesHiddenInput : 'namesHiddenInput',
         usersName : [],
         getNames: function (data) {
             var list = data;
@@ -28,9 +29,15 @@ var nameSearch = nameSearch || {};
             this.updateText();
         },
         updateText : function(){
-            var resultsArea = document.getElementById('resultArea');
-            resultsArea.value = nameSearch.showUsers.usersName;
-            
+            var nameInput = document.getElementById(this._namesHiddenInput);
+            nameInput.value = nameSearch.getNames.usersName;
+            console.log(nameInput.value)
         }  
     };
 })(nameSearch);
+
+(function (nameSearch){
+    nameSearch.search = function(){
+        
+    }
+})
