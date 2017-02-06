@@ -1,21 +1,30 @@
-<link rel="stylesheet" href="./assets/css/foundation.min.css">
+
 <link rel="stylesheet" href="./src/css/nameSearch.css">
 <input type="hidden" id="namesHiddenInput">
+<div class="header">
+
 <div class="row">
-        <h1>Names</h1>
-        <div class="small-6 columns">
-                <labele>Enter Name</labele>
-                <input type="text" placeholder="Enter The Name">
-                <button id="showNamesBtn" class="button">Show Result</button>
+        <div class="small-3 columns">
+                <img src="http://placehold.it/280x220/cacaca/b7178c?text=USER" alt="">
+                <button id="showNamesBtn" class="button expanded">Show</button>
         </div>
-        <div class="small-6 columns">
-                <labele>Enter Name</labele>
+        <div class="callout small-3 small-offset-2 columns" id="searchUser">
+                <labele>Search By any of</labele>
                 <input type="text" placeholder="Enter The Name">
-                <button class="button">Add</button>
+                <input type="text" placeholder="Enter Eamil Address">
+                <input type="text" placeholder="Enter user name">
+                <button class="button ">Serach</button>
         </div>
-
-
+        <div class="callout small-3 small-offset-1 columns" id="customUser">
+                <labele>New User</labele>
+                <input type="text" id="customNameInput" placeholder="Enter The Name">
+                <input type="text" id="customEmailInput" placeholder="Enter Eamil Address">
+                <input type="text" id="customUsernameInput" placeholder="Enter user name">
+                <button class="button" id="customAddBtn">Add</button>
+        </div>
 </div>
+</div>
+
 <div class="row" id="cards-container">
 </div>
 <script src="./assets/js/jquery.js"></script>
