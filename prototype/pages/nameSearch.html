@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="./assets/css/foundation.min.css">
+<link rel="stylesheet" href="./src/css/nameSearch.css">
 <input type="hidden" id="namesHiddenInput">
 <div class="row">
+        <h1>Names</h1>
         <div class="small-6 columns">
-                <h1>Name Search</h1>
                 <labele>Enter Name</labele>
                 <input type="text" placeholder="Enter The Name">
                 <button id="showNamesBtn" class="button">Show Result</button>
@@ -11,22 +12,11 @@
                 <labele>Enter Name</labele>
                 <input type="text" placeholder="Enter The Name">
                 <button class="button">Add</button>
+        </div>
 
-        </div>
-        
+
 </div>
-<div class="row">
-        <div class="small-6 columns">
-                <table>
-                        <thead>
-                                <th>    </th>
-                                <th>Name</th>
-                        </thead>
-                        <tbody id="namesTable">
-                                <tr></tr>
-                        </tbody>
-                </table>
-        </div>
+<div class="row" id="cards-container">
 </div>
 <script src="./assets/js/jquery.js"></script>
 <script src="./src/js/nameSearch.js"></script>
@@ -34,4 +24,5 @@
         $(document).ready(function () {
                 nameSearch.init();
         });
+
 </script>
