@@ -1,4 +1,4 @@
-define([], function(){
+
 var playerName = '';
     
     function logPlayer() {
@@ -13,10 +13,6 @@ var playerName = '';
         return playerName;
     }
     
-    return {
-        logPlayer: logPlayer,
-        setName: setName,
-        getName: getName
-    };
-});
-    
+    exports.logPlayer = logPlayer;
+    exports.setName = setName;
+    exports.getName = getName;

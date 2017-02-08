@@ -1,4 +1,5 @@
-define(['./player', '/game'], function(player, game){
+var player = require('./player.js');
+var game = require('./game.js');
 
     console.log('Starting MultiMath with an IIFE');
     
@@ -16,7 +17,5 @@ define(['./player', '/game'], function(player, game){
     // set the default number of problems
     document.getElementById('problemCount').value = game.getProblemCount();
 
-
-});
     
     
