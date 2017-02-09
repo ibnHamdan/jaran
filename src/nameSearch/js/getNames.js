@@ -1,11 +1,12 @@
-//var showNames = require('./showNames.js');
+var showNames = require('./showNames');
 
 
-getNames = {
+module.exports = {
     _namesHiddenInput: 'namesHiddenInput',
     usersName: [],
     
     UpdateNames: function (data) {
+      
       var list = data
       for (var val of list) {
         var userInfo = {
@@ -14,19 +15,12 @@ getNames = {
           username: val.username,
           city: val.address.city
         }
-        getNames.usersName.push(userInfo)
+        this.usersName.push(userInfo)
       }
-      getNames.updateText();
-      //showNames.showNames.showNamesEvent();
-      //showNames.showNames.showNamesEvent(this.usersName);
+      showNames.showNamesEvent(this.usersName);
     },
     updateText: function () {
-      var nameInput = document.getElementById(getNames._namesHiddenInput)
-      nameInput.value = getNames.usersName
+      var nameInput = document.getElementById(this._namesHiddenInput)
+      nameInput.value = this.usersName
     }
-  }
-
-
-  module.exports = {
-      getNames: getNames
   }

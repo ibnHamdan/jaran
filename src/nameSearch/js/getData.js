@@ -1,14 +1,9 @@
-var getNames = require('./getNames.js');
+var getNames = require('./getNames')
 
-
-  getData = function () {
-    var _this = this
-    $.ajax({
-      url: 'https://jsonplaceholder.typicode.com/users',
-      method: 'Get'
-    }).done(getNames.getNames.UpdateNames.bind(this.getNames))
-  }
-
-module.exports = {
-    getData: getData,
+module.exports = function () {
+  var _this = this
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/users',
+    method: 'Get'
+  }).done(getNames.UpdateNames.bind(getNames))
 }

@@ -1,11 +1,7 @@
-var getData = require('./getData.js')
-var getNames = require('./getNames.js')
-var showNames = require('./showNames.js')
-var getCustomName = require('./getCustomeName.js')
+var getData = require('./getData')
+var getCustomeName = require('./getCustomeName')
 
 $(document).ready(function () {
-                getData.getData();
-                showNames.showNames.showNamesEvent();
-                getCustomName.getCustomName._addCustomeName();
-
-            });
+  getData()
+  getCustomeName._addCustomeName()
+})

@@ -1,5 +1,6 @@
-var showNames = require('./showNames.js')
-getCustomName = {
+var showNames = require('./showNames')
+
+module.exports = {
     _customNameInput: '#customNameInput',
     _customEmailInput: '#customEmailInput',
     _customUsernameInput: '#customUsernameInput',
@@ -7,7 +8,9 @@ getCustomName = {
     customNames: [],
 
     _addCustomeName: function () {
-      var _this = this
+      
+      var _this = this;
+
       $(this._customAddBtn).on('click', function () {
 
         var customName = $(_this._customNameInput).val()
@@ -18,15 +21,9 @@ getCustomName = {
           email: customEmail,
           userName: customUserName
         }
-
         _this.customNames.push(customData)
-        showNames.showNames.showNamesEvent(_this.customNames)
-        console.log(_this.customNames);
+        showNames.showNamesEvent(_this.customNames)
       })
     }
 
-  }
-
-  module.exports = {
-      getCustomName: getCustomName,
   }
