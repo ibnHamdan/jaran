@@ -1,4 +1,4 @@
-var project = "nameSearch";
+var project = "clock";
 
 module.exports = {
     SCSS : ['./src/' + project+ '/scss/**/*.scss'],

@@ -8,5 +8,5 @@ gulp.task('source:sass', () =>{
     return gulp.src(maps.SCSS)
     .pipe(sass().on('error', sass.logError))
     .pipe(flatten())
-    .pipe(gulp.dest('./_build/src/css/'));
+    .pipe(gulp.dest('./_build/css/'));
 });
