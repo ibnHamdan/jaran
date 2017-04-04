@@ -12,7 +12,7 @@ gulp.task('source:javascript', () => {
     return gulp.src(maps.JS)
     .pipe(babel()
     .on('error', babelOnError))
-    .pipe(gulp.dest('./_build/src/js/'));
+    .pipe(gulp.dest('./_build/js/'));
 });
 
 
