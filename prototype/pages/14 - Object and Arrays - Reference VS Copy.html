@@ -1,0 +1,53 @@
+<script>
+
+const players = ['wes', 'sarah', 'rayan', 'poppy'];
+
+const team = players;
+
+//team[3] = 'lux'
+
+const team2 = players.slice();
+const team3 = [].concat(players);
+const team4 = [...players]
+team4[3] = 'heeee me';
+const team5 = Array.from(players)
+
+// console.log(team2)
+// console.log(team3)
+// console.log(team4)
+// console.log(team5)
+// console.log(players)
+
+
+// Object
+
+const person = {
+    name: 'wes Box',
+    age: 80
+};
+
+const captain = person;
+captain.number = 99;
+
+const cap2 =Object.assign({}, person, {number:88});
+//console.log(cap2)
+
+const wes = {
+    name: 'wes',
+    age: 100,
+    social: {
+        twitter: '@wesbos',
+        facebook: 'wesbos.debeloper'
+    }
+}
+
+const dev = Object.assign({}, wes);
+
+const dev2 = JSON.parse(JSON.stringify(wes));
+
+
+
+
+
+
+</script>
