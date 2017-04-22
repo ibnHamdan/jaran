@@ -8,11 +8,11 @@ requireDir('./gulp', { recurse: true });
 gulp.task('default', ['server', 'watch']);
 
 // Builds the files
-gulp.task('build', ['clean', 'prototype']);
+gulp.task('build', ['prototype']);
 
-gulp.task('source', ['clean', 'source:sass', 'source:javascript','source:assets']);
+gulp.task('source', [ 'source:sass', 'source:javascript','source:assets']);
 
-gulp.task('prototype',['clean','source', 'prototype:html', 'prototype:assets']);
+gulp.task('prototype',['source', 'prototype:html', 'prototype:assets']);
 
 // Starts a browerSync instance
 gulp.task('server', ['build'], function(){

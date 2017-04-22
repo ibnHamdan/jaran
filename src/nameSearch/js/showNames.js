@@ -2,10 +2,11 @@ var getNames = require('./getNames')
 
 module.exports = {
   _showNamesBtn: '#showNamesBtn',
+  _customAddBtn: '#customAddBtn',
   _namesTable: '#namesTable',
 
   showNamesEvent: function (names) {
-    $(this._showNamesBtn).on('click', function () {
+    $(this._showNamesBtn, this._showNamesBtn).on('click', function () {
       for (var val of names) {
         var cardContainer = document.getElementById('cards-container')
         var card = $('<div class="card"></div>')
