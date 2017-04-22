@@ -1,5 +1,6 @@
 var project = "20 - Native Speech Recognition";
 
+
 module.exports = {
     SCSS : ['./src/' + project+ '/scss/**/*.scss'],
     JS : ['./src/' + project + '/js/**/*.js'],
