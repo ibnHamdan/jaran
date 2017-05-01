@@ -12,7 +12,7 @@ gulp.task('build', ['prototype']);
 
 gulp.task('source', [ 'source:sass', 'source:javascript','source:assets']);
 
-gulp.task('prototype',['source', 'prototype:html', 'prototype:assets']);
+gulp.task('prototype',['source', 'prototype:html', 'prototype:assets', 'js:assets']);
 
 // Starts a browerSync instance
 gulp.task('server', ['build'], function(){

@@ -1,4 +1,4 @@
-var project = "20 - Native Speech Recognition";
+var project = "27 - Click and Drag to Scroll";
 
 
 module.exports = {
@@ -15,3 +15,5 @@ module.exports = {
 //16 - CSS Text Shadow Mouse Move Effect
 //17 - Sorting Band Names without articles
 // 20 - Native Speech Recognition
+// 25 - Event Capture, Propagation, Bubbling and Once
+// 27 - Click and Drag to Scroll
