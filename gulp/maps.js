@@ -1,4 +1,4 @@
-var project = "27 - Click and Drag to Scroll";
+var project = "15 - LocalStorage and Event Delegation";
 
 
 module.exports = {
@@ -12,6 +12,7 @@ module.exports = {
 //10 - Hold Shift to Check Multiple Checkboxes
 //11 - Custom HTML5 Video Player
 //13 - Slide In on Scroll
+//15 - LocalStorage and Event Delegation
 //16 - CSS Text Shadow Mouse Move Effect
 //17 - Sorting Band Names without articles
 // 20 - Native Speech Recognition
